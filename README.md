@@ -59,7 +59,7 @@ ing it acquired before a change in the weather. The old woman was let in by the 
 - [ ] the half-light of a suspensor lamp, di
 - [ ] fore a change in the weather. The old woman
 
-## Libraries and Dependencies
+### Libraries and Dependencies
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -69,29 +69,29 @@ ing it acquired before a change in the weather. The old woman was let in by the 
 |     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
 |  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
 
-## Front-End
+### Front-End
 
-### Wireframes
+#### Wireframes
 
-#### Mobile
+##### Mobile
 
 ![image](https://user-images.githubusercontent.com/89525025/145303166-7ed28f65-18f3-41d5-848b-4f93fe06aaf3.png)
 
-#### Tablet
+##### Tablet
 
 ![image](https://user-images.githubusercontent.com/89525025/145303170-230c62ad-9b10-498f-88bd-26599a3db0df.png)
 
-#### Desktop
+##### Desktop
 
 ![image](https://user-images.githubusercontent.com/89525025/145303173-39b12aca-247b-43e3-889b-8a2208347dd2.png)
 
-### Components
+#### Components
 
-#### Component Hierarchy
+##### Component Hierarchy
 
 ![image](https://user-images.githubusercontent.com/89525025/145303198-2bdbc0aa-c33b-46b1-924d-fbf2684e24d1.png)
 
-#### Component Archetecture
+##### Component Archetecture
 
 ```
 src
@@ -105,6 +105,12 @@ src
 |__ services/
 
 ```
+
+### Server (Back End)
+
+#### ERD Model
+
+![image](https://user-images.githubusercontent.com/89525025/145303198-2bdbc0aa-c33b-46b1-924d-fbf2684e24d1.png)
 
 ### Project Schedule
 
