@@ -1,5 +1,5 @@
 # Wikiroll
-t was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. The old woman was let in by the side door down the vaulted passage by Paul's room and she was allowed a moment to peer in at him where he lay in his bed. By the half-light of a suspensor lamp, dimmed and hanging near the floor, the awakened boy could see a bulky female shape at his door, standing one step ahead of his mother. The old woman was a witch shadow - hair like matted spiderwebs, hooded 'round darkness of features, eyes like glittering jewels.
+Wikiroll is an interactive library of Brazilian Jiu-Jitsu positions, submissions, and transitions.
 
 ### Links
 
@@ -10,7 +10,7 @@ t was a warm night at Castle Caladan, and the ancient pile of stone that had ser
 ## Goals
 
 ### MVP
-ing it acquired before a change in the weather. The old woman was let in by the side door down the vaulted passage by Paul's room and she was allowed a moment to peer in at him where he lay in his bed. By the half-light of a suspensor lamp, dimmed and hanging near the floor, the awakened boy could see a bulky female shape at his door, standing one st
+The project I would like to present by the end of the week is one that has full CRUD functionality on the Front-End and Back-End. Styling is based on the wireframe shown below. Shown below is also the file structure, component heirarchy, and ERD model.
 
 #### Planning
 - [ ] Have a thoroughly developed README.md file
@@ -58,12 +58,8 @@ ing it acquired before a change in the weather. The old woman was let in by the 
 - [ ] Use effective and safe branching and merging processes
 
 ### Post-MVP
-ing it acquired before a change in the weather. The old woman was let in by the side door down the vaulted passage by Paul's room and she was allowed a moment to peer in at him where he lay in his bed. By the half-light of a suspensor lamp, dimmed and hanging near the floor, the awakened boy could see a bulky female shape at his door, standing one st
 
-#### Some Topic
-- [ ] in his bed. By the half-light of a sus
-- [ ] the half-light of a suspensor lamp, di
-- [ ] fore a change in the weather. The old woman
+- [ ] Authentication/Verification
 
 ### Libraries and Dependencies
 
