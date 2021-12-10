@@ -123,7 +123,7 @@ src
 
 #### ERD Model
 
-![image](https://i.imgur.com/oBAwzM2.png)
+![image](https://i.imgur.com/O88t1hn.png)
 
 ### Project Schedule
 
