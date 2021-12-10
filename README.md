@@ -4,6 +4,7 @@ t was a warm night at Castle Caladan, and the ancient pile of stone that had ser
 ### Links
 
 - [Wireframe](https://www.figma.com/file/uhnG8aumV8wWFh7ycGM0k4/Wikiroll?node-id=0%3A1)
+- [Component Heirarchy](https://whimsical.com/project-4-ga-KAzUWiUtsS79gX5uvKu3P9)
 - [Color Pallet](https://coolors.co/202021-1d1adb-5553df-f4f5f6-ed8383-e51010-463434)
 
 ## Goals
@@ -80,11 +81,7 @@ ing it acquired before a change in the weather. The old woman was let in by the 
 
 ##### Mobile
 
-![image](https://user-images.githubusercontent.com/89525025/145303166-7ed28f65-18f3-41d5-848b-4f93fe06aaf3.png)
-
-##### Tablet
-
-![image](https://user-images.githubusercontent.com/89525025/145303170-230c62ad-9b10-498f-88bd-26599a3db0df.png)
+![image](https://i.imgur.com/jy0Kh6L.png)
 
 ##### Desktop
 
@@ -94,20 +91,35 @@ ing it acquired before a change in the weather. The old woman was let in by the 
 
 ##### Component Hierarchy
 
-![image](https://user-images.githubusercontent.com/89525025/145303198-2bdbc0aa-c33b-46b1-924d-fbf2684e24d1.png)
+![image](https://user-images.githubusercontent.com/89525025/145627425-03cad6cf-28bf-4106-be67-0ff3779d3d2e.png)
 
-##### Component Archetecture
+##### File Archetecture
 
 ```
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+      |__ css/
+      |__ images/
 |__ components/
-      |__ Header.jsx
+      |__ Nav.jsx
+      |__ PTSCard.jsx
+      |__ DetailFocus.jsx
+      |__ DetailTransitions.jsx
+      |__ DetailSubmissions.jsx
+      |__ DetailPositions.jsx
+      |__ DetailCard.jsx
+      |__ CreateForm.jsx
+      |__ EditForm.jsx
+|__ layouts/
+      |__ Layout.jsx
+|__ screens/
+      |__ Splash.jsx
+      |__ Search.jsx
+      |__ Detail.jsx
+      |__ Create.jsx
+      |__ Edit.jsx
 |__ services/
+|__ utilites/
 
 ```
 
@@ -115,15 +127,15 @@ src
 
 #### ERD Model
 
-![image](https://user-images.githubusercontent.com/89525025/145303198-2bdbc0aa-c33b-46b1-924d-fbf2684e24d1.png)
+![image](https://i.imgur.com/oBAwzM2.png)
 
 ### Project Schedule
 
 | Date | Deliverable | Complete |
 | ---- | ----------- | -------- |
-| Wed 8 Dec 2021 | Project Idea | Incomplete |
-| Thu 9 Dec 2021 | Wireframe, Comp  | Incomplete |
-| Fri 10 Dec 2021 | Project Proposal | Incomplete|
+| Wed 8 Dec 2021 | Project Idea | Complete |
+| Thu 9 Dec 2021 | Wireframe, Componenet Hierarchy, ERD  | Pending |
+| Fri 10 Dec 2021 | Project Proposal | Pending |
 | Sat 11 Dec 2021 | Back-End Deployed | Incomplete |
 | Sun 12 Dec 2021 |  |  |
 | Mon 13 Dec 2021 | Styling | Incomplete |
