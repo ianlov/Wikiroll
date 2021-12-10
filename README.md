@@ -87,7 +87,7 @@ The project I would like to present by the end of the week is one that has full 
 
 ##### Component Hierarchy
 
-![image](https://user-images.githubusercontent.com/89525025/145627425-03cad6cf-28bf-4106-be67-0ff3779d3d2e.png)
+![image](https://user-images.githubusercontent.com/89525025/145649116-64f768c2-04b3-43f5-9dbd-f56e47eaaace.png)
 
 ##### File Archetecture
 
