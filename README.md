@@ -87,7 +87,11 @@ The project I would like to present by the end of the week is one that has full 
 
 ##### Component Hierarchy
 
+<<<<<<< HEAD
 ![image](blob:https://whimsical.com/926958f9-cfcb-4f29-9527-2c317962a3e3)
+=======
+![image](https://user-images.githubusercontent.com/89525025/145649116-64f768c2-04b3-43f5-9dbd-f56e47eaaace.png)
+>>>>>>> 3950944e09cb649e50625795091a7f3ee1e2162a
 
 ##### File Archetecture
 
@@ -123,7 +127,7 @@ src
 
 #### ERD Model
 
-![image](https://i.imgur.com/oBAwzM2.png)
+![image](https://i.imgur.com/O88t1hn.png)
 
 ### Project Schedule
 
