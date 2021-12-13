@@ -13,3 +13,28 @@
   text-align: center;
 }
 
+.splash {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.splash__welcome {
+
+}
+
+.splash__welcome > h1 {
+  text-align: center;
+}
+
+.splash__welcome__description-container {
+  width: 90vw;
+}
+
+.splash__positions {
+  
+}
+
+.splash__positions > h2 {
+  text-align: center;
+}
