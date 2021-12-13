@@ -1,0 +1,52 @@
+# PROJECT ISSUE TICKET
+
+> Copy and paste the raw MD code of this template **into an issue ticket in your project repo**, then replace the quote blocks with your detailed, clear descriptions.
+
+## Unexpected Behavior
+
+I am getting a 500 error when trying to make a POST request. The POST is to submissions which is nested under positions.
+
+## Expected Behavior
+
+I expect to POST data to submissions
+
+## Reproduce the Error
+
+> Describe the steps we can take to reproduce the error, i.e.:
+
+```md
+1. Clone this repo.
+2. Run bundle
+3. rails db:create
+4. On postman create a POST request with the url http://localhost:3000/positions/1/submissions
+5. The JSON body will have {
+    "submission": {
+        "name": "test",
+        "description": "testtesttest",
+        "img_url": "test.png"
+    }
+}
+6. See the subsequent error in the console. Cry
+```
+
+## Documentation
+
+> Include the exact error message, and if helpful, any supplemental documentation, such as screen captures.
+
+```md
+"status": 500,
+    "error": "Internal Server Error",
+    "exception": "#<ArgumentError: wrong number of arguments (given 2, expected 0..1)>",
+    "traces": {
+```
+
+I am following my zoos/pandas homework, where I nested pandas under zoos. I remember being confused as to what the proper code was. I don't remember if you put the parent id in the params or the json request.
+
+## Attempted Resolution
+
+> If you haven't already, **Google your error message now**. See if those error messages return an answer. Include at least 2 resources you've tried to consult such as walk-throughs, stack overflow articles, and other discussion threads related to your error.
+
+```md
+1. https://git.generalassemb.ly/sei-nyc-pawpaw/rails-controllers-lesson/blob/master/nestedAssociations.md
+2. Listened through the lectures I could access.
+```
