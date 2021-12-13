@@ -16,7 +16,9 @@ class TransitionsController < ApplicationController
 
   # POST /transitions
   def create
-    @transition = Transition.new(transition_params, :position_id)
+    @transition = Transition.new(transition_params)
+    @position = Position.find(params[:position_id])
+    @transition.start = @position
 
     if @transition.save
       render json: @transition, status: :created
@@ -47,6 +49,6 @@ class TransitionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def transition_params
-      params.require(:transition).permit(:name, :description, :img_url, :start_id, :finish_id)
+      params.require(:transition).permit(:name, :description, :img_url, :finish_id)
     end
 end

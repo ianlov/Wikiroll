@@ -15,8 +15,9 @@ class SubmissionsController < ApplicationController
 
   # POST /submissions
   def create
-    @submission = Submission.new(submission_params, :position_id)
-
+    @submission = Submission.new(submission_params)
+    @position = Position.find(params[:position_id])
+    @submission.position = @position
     if @submission.save
       render json: @submission, status: :created
     else
