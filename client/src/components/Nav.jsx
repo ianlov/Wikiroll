@@ -12,6 +12,11 @@ const Nav = () => {
     ev.target.className = "nav__items__searchbar";
   }
 
+  const handleSubmit = (ev) => {
+    const search = ev.target.value
+    
+  }
+
   return (
     <div className="nav" >
       <div className="nav__items" >
@@ -23,6 +28,7 @@ const Nav = () => {
           type="search" placeholder="Search" 
           onFocus={handleFocus}
           onBlur={handleBlur}
+          onSubmit={handleSubmit}
         />
       </div>
       <div className="nav__bar-out" >
