@@ -20,6 +20,14 @@
   border-radius: 17.5px;
   align-self: flex-start;
   margin: 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__items__logo > img {
+  height: 30px;
+  width: auto;
 }
 
 .nav__items__searchbar {
