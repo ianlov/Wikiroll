@@ -3,7 +3,8 @@ class TransitionsController < ApplicationController
 
   # GET /transitions
   def index
-    @transitions = Transition.all
+    @position = Position.find(params[:position_id])
+    @transitions = Transition.where(start_id: @position.id)
 
     render json: @transitions
   end
@@ -15,10 +16,10 @@ class TransitionsController < ApplicationController
 
   # POST /transitions
   def create
-    @transition = Transition.new(transition_params)
+    @transition = Transition.new(transition_params, :position_id)
 
     if @transition.save
-      render json: @transition, status: :created, location: @transition
+      render json: @transition, status: :created
     else
       render json: @transition.errors, status: :unprocessable_entity
     end
@@ -46,6 +47,6 @@ class TransitionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def transition_params
-      params.require(:transition).permit(:position_id, :position_id)
+      params.require(:transition).permit(:name, :description, :img_url, :start_id, :finish_id)
     end
 end

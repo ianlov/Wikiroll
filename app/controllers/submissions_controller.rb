@@ -3,9 +3,9 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions
   def index
-    @submissions = Submission.all
-
-    render json: @submissions
+    @position = Position.find(params[:position_id])
+    @submissions = Submission.where(position_id: @position.id)
+    render json: @submissions, status: :ok
   end
 
   # GET /submissions/1
@@ -15,10 +15,10 @@ class SubmissionsController < ApplicationController
 
   # POST /submissions
   def create
-    @submission = Submission.new(submission_params)
+    @submission = Submission.new(submission_params, :position_id)
 
     if @submission.save
-      render json: @submission, status: :created, location: @submission
+      render json: @submission, status: :created
     else
       render json: @submission.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class SubmissionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def submission_params
-      params.require(:submission).permit(:position_id, :name, :description, :img_url)
+      params.require(:submission).permit(:name, :description, :img_url)
     end
 end

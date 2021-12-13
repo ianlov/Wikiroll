@@ -4,7 +4,6 @@ class PositionsController < ApplicationController
   # GET /positions
   def index
     @positions = Position.all
-
     render json: @positions
   end
 
