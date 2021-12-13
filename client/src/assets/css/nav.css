@@ -36,12 +36,27 @@
   height: 35px;
   border-radius: 17.5px;
   margin: 5px 5px;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav__items__searchbar__focus {
+  background-color: #F4F5F6;
+  width: 250px;
+  height: 35px;
+  border-radius: 17.5px;
+  margin: 5px 5px;
+  border: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .nav__bar-out {
   background-color: #F4F5F6;
   height: 100%;
-  width: 84px;
+  width: 100%;
+  max-width: 84px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -51,5 +66,5 @@
 .nav__bar-out__bar-in {
   background-color: #E51010;
   height: 100%;
-  width: 72px;
+  width: 80%;
 }
