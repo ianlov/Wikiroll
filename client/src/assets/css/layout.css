@@ -1,0 +1,11 @@
+footer {
+  height: 32px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+footer > a > img {
+  height: 30px;
+  width: auto;
+}

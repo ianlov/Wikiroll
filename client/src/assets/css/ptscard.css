@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 12.5px auto;
+  margin: 12.5px 5px;
 }
 
 .pts-card > h2 {

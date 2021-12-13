@@ -21,7 +21,7 @@ const Splash = () => {
   return (
     <>
     <div className="splash__splash-image" >
-      <h1>"If you do this, I do that, and if you do that, I do this, <br/>forever" <br/>-Relson Gracie</h1>
+      <h1>"If you do this, I do that, and if you do that, I do this... <br/>forever" <br/><br/>-Relson Gracie</h1>
     </div>
     <Layout>
       <div className="splash" >
@@ -33,14 +33,16 @@ const Splash = () => {
         </div>
         <div className="splash__positions" >
           <h2>Start with a position</h2>
-          {positions.map(position => (
-            <Link
-              style={{textDecoration: "none"}}
-              to="/"
-            >
-              <PTSCard position={position} />
-            </Link>
-          ))}
+          <div className="splash__positions__container">
+            {positions.map(position => (
+              <Link
+                style={{textDecoration: "none"}}
+                to="/"
+              >
+                <PTSCard position={position} />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
