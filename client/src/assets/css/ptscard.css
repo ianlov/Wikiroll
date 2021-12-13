@@ -1,0 +1,9 @@
+.pts-card {
+  height: 82px;
+  width: 80%;
+}
+
+.pts-card > h2 {
+  text-align: center;
+  text-decoration: none;
+}

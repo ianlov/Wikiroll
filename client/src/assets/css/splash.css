@@ -1,0 +1,15 @@
+.splash__splash-image {
+  background-image: url('../images/bjj-rolling.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+}
+
+.splash__splash-image > h1 {
+  position: absolute;
+  top: 35vh;
+  color: white;
+  text-align: center;
+}
+

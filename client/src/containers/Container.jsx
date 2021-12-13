@@ -1,10 +1,8 @@
-import Layout from "../layouts/Layout.jsx"
+import Splash from "../screens/Splash.jsx";
 
 const Container = () => {
   return (
-    <Layout>
-      Container
-    </Layout>  
+      <Splash /> 
   )
 }
 
