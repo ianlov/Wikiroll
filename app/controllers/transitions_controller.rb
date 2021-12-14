@@ -49,6 +49,6 @@ class TransitionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def transition_params
-      params.require(:transition).permit(:name, :description, :img_url, :finish_id)
+      params.require(:transition).permit(:name, :description, :img_url, :finish_id, :what_type)
     end
 end
