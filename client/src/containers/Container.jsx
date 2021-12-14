@@ -7,13 +7,11 @@ import Position from "../screens/Position.jsx";
 import Edit from "../screens/Edit.jsx";
 import Search from "../screens/Search.jsx";
 import Splash from "../screens/Splash.jsx";
-import Submission from "../screens/Submission.jsx";
-import Transition from "../screens/Transition.jsx";
 
 const Container = () => {
   const [positions, setPositions] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
-
+  
   useEffect(() => {
     const positionFetch = async () => {
       const allPositions = await getPositions();
@@ -35,14 +33,6 @@ const Container = () => {
           positions={positions}
         /> } />
         <Route path="/position/:id" children={ <Position 
-          setSearchResults={setSearchResults}
-          positions={positions}
-        /> } />
-        <Route path="/position/:id/submission/:id" children={ <Submission 
-          setSearchResults={setSearchResults}
-          positions={positions}
-        /> } />
-        <Route path="/position/:id/transition/:id" children={ <Transition
           setSearchResults={setSearchResults}
           positions={positions}
         /> } />

@@ -1,7 +1,8 @@
-import '../assets/css/detail.css';
+import '../assets/css/position.css';
 
 import Layout from "../layouts/Layout.jsx";
 import PTSCard from "../components/PTSCard.jsx";
+import DetailCard from "../components/DetailCard.jsx";
 import { findPositionWithId } from "../utilities/find.js";
 import { getTransitions } from "../services/transitions.js";
 import { getSubmissions } from "../services/submissions.js";
@@ -15,6 +16,7 @@ const Detail = (props) => {
 
   const [transitions, setTransitions] = useState([]);
   const [submissions, setSubmissions] = useState([]);
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
     const transitionFetch = async () => {
@@ -27,7 +29,8 @@ const Detail = (props) => {
       setSubmissions(allSubmissions);
     }
     submissionFetch()
-  }, [])
+    setShow(false)
+  }, [position.id])
 
   return (
     <Layout 
@@ -41,28 +44,30 @@ const Detail = (props) => {
         </div>
         <div className="detail-container__description">
           <p>{position.description}</p>
+          <Link 
+            to="/edit"
+            className="link-to-edit" 
+          ><p>Edit</p></Link>
         </div>
         <div className="detail-container__trans-sub-card-container">
           {transitions.length ? <div className="detail-container__trans-sub-card-container__trans">
             <h2>Transitions from {position.name}</h2>
             {transitions.map(transition => (
-              <Link
-                to={`/position/${position.id}/transition/${transition.id}`}
-                key={transition.id}
-              >
-                <PTSCard focus={transition} />
-              </Link>
+              <DetailCard 
+                focus={transition}
+                show={show} 
+                setShow={setShow}
+              />
             ))}
           </div> : null}
           {submissions.length ? <div className="detail-container__trans-sub-card-container__sub">
             <h2>Submissions from {position.name}</h2>
             {submissions.map(submission => (
-              <Link 
-                to={`/position/${position.id}/submission/${submission.id}`}
-                key={submission.id}
-              >
-                <PTSCard focus={submission} />
-              </Link>
+              <DetailCard 
+                focus={submission} 
+                show={show} 
+                setShow={setShow}
+              />
             ))}
           </div> : null}
         </div>

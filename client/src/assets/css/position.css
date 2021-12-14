@@ -54,3 +54,9 @@
   flex-flow: column nowrap;
   align-items: center;
 }
+
+.link-to-edit {
+  text-align: left;
+  text-decoration: underline;
+  color: #F4F5F6;
+}
