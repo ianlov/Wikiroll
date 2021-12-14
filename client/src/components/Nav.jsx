@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { useState } from "react";
 
 import '../assets/css/nav.css';
-import logo from '../assets/images/logo.png'
+import { find } from "../utilities/find.js";
+import logo from '../assets/images/logo.png';
 
-const Nav = () => {
+const Nav = (props) => {
+  const [search, setSearch] = useState("");
+  const history = useHistory();
+
   const handleFocus = (ev) => {
-    ev.target.className = "nav__items__searchbar__focus"
+    ev.target.className = "nav__items__searchbar__focus";
   }
 
   const handleBlur = (ev) => {
@@ -13,8 +18,10 @@ const Nav = () => {
   }
 
   const handleSubmit = (ev) => {
-    const search = ev.target.value
-    
+    ev.preventDefault();
+    const results = find(props.positions, search);
+    props.setSearchResults(results);
+    history.push("/search");
   }
 
   return (
@@ -23,13 +30,17 @@ const Nav = () => {
         <Link className="nav__items__logo" to="/">
           <img src={logo} alt="logo" />
         </Link>
-        <input 
-          className="nav__items__searchbar" 
-          type="search" placeholder="Search" 
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          onSubmit={handleSubmit}
-        />
+        <form onSubmit={handleSubmit} >
+          <input 
+            className="nav__items__searchbar" 
+            type="search" 
+            placeholder="Search"
+            value={search}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onChange={(ev) => setSearch(ev.target.value)}
+          />
+        </form>
       </div>
       <div className="nav__bar-out" >
         <div className="nav__bar-out__bar-in"></div>

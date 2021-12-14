@@ -1,0 +1,7 @@
+.search-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 1000px;
+}

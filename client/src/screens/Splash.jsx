@@ -5,25 +5,16 @@ import PTSCard from "../components/PTSCard.jsx";
 
 import { Link } from "react-router-dom";
 
-const positions = [
-  "Open Guard",
-  "Closed Guard",
-  "Half Guard",
-  "Butterfly Guard",
-  "Side Control",
-  "Turtle",
-  "Mount",
-  "Knee On Belly",
-  "Back Control"
-]
-
 const Splash = (props) => {
   return (
     <>
     <div className="splash__splash-image" >
       <h1>"If you do this, I do that, and if you do that, I do this... <br/>forever" <br/><br/>-Relson Gracie</h1>
     </div>
-    <Layout >
+    <Layout 
+      setSearchResults={props.setSearchResults} 
+      positions={props.positions}
+    >
       <div className="splash" >
         <div className="splash__welcome" >
           <h1>Welcome to Wikiroll</h1>
@@ -34,12 +25,13 @@ const Splash = (props) => {
         <div className="splash__positions" >
           <h2>Start with a position</h2>
           <div className="splash__positions__container">
-            {positions.map(position => (
+            {props.positions.map(position => (
               <Link
                 style={{textDecoration: "none"}}
-                to="/"
+                to={`/detail/${position.id}`}
+                key={position.id}
               >
-                <PTSCard position={position} />
+                <PTSCard name={position.name} />
               </Link>
             ))}
           </div>

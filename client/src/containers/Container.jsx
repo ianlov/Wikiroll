@@ -10,15 +10,12 @@ import Splash from "../screens/Splash.jsx";
 
 const Container = () => {
   const [positions, setPositions] = useState([]);
-  const [submissions, setSubmissions] = useState([]);
-  const [transitions, setTransitions] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const positionFetch = async () => {
       const allPositions = await getPositions();
       setPositions(allPositions);
-      console.log(positions);
     }
     positionFetch()
   }, [])
@@ -26,11 +23,21 @@ const Container = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/" element={<Splash setSearchResults={setSearchResults} />} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/detail/:id" component={Detail} />
-        <Route exact path="/create" component={Create} />
-        <Route exact path="/edit" component={Edit} />
+        <Route exact path="/" children={ <Splash 
+          setSearchResults={setSearchResults} 
+          positions={positions}
+        /> } />
+        <Route path="/search" children={ <Search 
+          searchResults={searchResults}
+          setSearchResults={setSearchResults}
+          positions={positions}
+        /> } />
+        <Route path="/detail/:id" children={ <Detail 
+          setSearchResults={setSearchResults}
+          positions={positions}
+        /> } />
+        <Route path="/create" component={Create} />
+        <Route path="/edit" component={Edit} />
       </Switch>
     </>
   )
