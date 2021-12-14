@@ -7,6 +7,11 @@
   align-items: center;
   margin: 12.5px 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 1s ease-in-out;
+}
+
+.pts-card:hover {
+  color: green;
 }
 
 .pts-card > h2 {

@@ -8,36 +8,39 @@ import { Link } from "react-router-dom";
 const Splash = (props) => {
   return (
     <>
-    <div className="splash__splash-image" >
-      <h1>"If you do this, I do that, and if you do that, I do this... <br/>forever" <br/><br/>-Relson Gracie</h1>
-    </div>
-    <Layout 
-      setSearchResults={props.setSearchResults} 
-      positions={props.positions}
-    >
-      <div className="splash" >
-        <div className="splash__welcome" >
-          <h1>Welcome to Wikiroll</h1>
-          <div className="splash__welcome__description-container">
-          <p>t was a warm night at Castle Caladan, and the ancient pile of stone that had served the Atreides family as home for twenty-six generations bore that cooled-sweat feeling it acquired before a change in the weather. The old woman was let in by the side door down the vaulted passage by Paul's room and she was allowed a moment to peer in at him where he lay in his bed. By the half-light of a suspensor lamp, dimmed and hanging near the floor, the awakened boy could see a bulky female shape at his door, standing one step ahead of his mother. The old woman was a witch shadow - hair like matted spiderwebs, hooded 'round darkness of features, eyes like glittering jewels.</p>
-          </div>
-        </div>
-        <div className="splash__positions" >
-          <h2>Start with a position</h2>
-          <div className="splash__positions__container">
-            {props.positions.map(position => (
-              <Link
-                style={{textDecoration: "none"}}
-                to={`/position/${position.id}`}
-                key={position.id}
-              >
-                <PTSCard focus={position} />
-              </Link>
-            ))}
-          </div>
+      <div className="splash__splash-image" >
+        <div className="splash__splash-image__text-container">
+          <h1>"If you do <span className="red-text" >this</span>, I do <span className="blue-text" >that</span>,<br />and if you do <span className="blue-text" >that</span>, I do <span className="red-text" >this</span>... <br />forever" <br /><br />-Relson Gracie</h1>
         </div>
       </div>
-    </Layout>
+      <Layout
+        setSearchResults={props.setSearchResults}
+        positions={props.positions}
+      >
+        <div className="splash" >
+          <div className="splash__welcome" >
+            <h1>Welcome to Wikiroll</h1>
+            <div className="splash__welcome__description-container">
+              <p>Wikiroll is an interactive library of Brazilian jiu-jitsu positions, transitions, and submissions. Begin your journey by selecting or searching a position. From there you will find the transitions and submissions that correspond to that position.</p>
+              <p>Brazilian jiu-jitsu is a sport of limitless possibility, so if you can't find the submission or transition you are looking for, create one!</p>
+            </div>
+          </div>
+          <div className="splash__positions" >
+            <h2>Start with a position</h2>
+            <div className="splash__positions__container">
+              {props.positions.map(position => (
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to={`/position/${position.id}`}
+                  key={position.id}
+                >
+                  <PTSCard focus={position} />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Layout>
     </>
   )
 }
