@@ -1,0 +1,14 @@
+.pts-card {
+  height: 82px;
+  width: 275px;
+  background-color: #202021;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12.5px 5px;
+}
+
+.pts-card > h2 {
+  color: #F4F5F6;
+}

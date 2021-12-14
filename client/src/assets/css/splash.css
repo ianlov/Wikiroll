@@ -1,0 +1,48 @@
+.splash__splash-image {
+  background-image: url('../images/bjj-rolling.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+}
+
+.splash__splash-image > h1 {
+  position: absolute;
+  top: 35vh;
+  width: 100vw;
+  color: white;
+  text-align: center;
+}
+
+.splash {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.splash__welcome {
+  width: 90vw;
+  max-width: 1000px;
+}
+
+.splash__welcome > h1 {
+  text-align: center;
+}
+
+/* .splash__welcome__description-container {
+} */
+
+.splash__positions {
+  width: 90vw;
+  max-width: 1000px;
+}
+
+.splash__positions > h2 {
+  text-align: center;
+}
+
+.splash__positions__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
