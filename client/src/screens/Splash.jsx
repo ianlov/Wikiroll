@@ -17,13 +17,13 @@ const positions = [
   "Back Control"
 ]
 
-const Splash = () => {
+const Splash = (props) => {
   return (
     <>
     <div className="splash__splash-image" >
       <h1>"If you do this, I do that, and if you do that, I do this... <br/>forever" <br/><br/>-Relson Gracie</h1>
     </div>
-    <Layout>
+    <Layout >
       <div className="splash" >
         <div className="splash__welcome" >
           <h1>Welcome to Wikiroll</h1>

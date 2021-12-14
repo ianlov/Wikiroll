@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_205916) do
+ActiveRecord::Schema.define(version: 2021_12_14_012326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_205916) do
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "what_type"
   end
 
   create_table "submissions", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_205916) do
     t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "what_type"
     t.index ["position_id"], name: "index_submissions_on_position_id"
   end
 
@@ -41,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_12_12_205916) do
     t.bigint "finish_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "what_type"
     t.index ["finish_id"], name: "index_transitions_on_finish_id"
     t.index ["start_id"], name: "index_transitions_on_start_id"
   end

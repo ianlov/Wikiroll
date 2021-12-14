@@ -12,6 +12,7 @@ const Container = () => {
   const [positions, setPositions] = useState([]);
   const [submissions, setSubmissions] = useState([]);
   const [transitions, setTransitions] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const positionFetch = async () => {
@@ -25,7 +26,7 @@ const Container = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Splash} />
+        <Route exact path="/" element={<Splash setSearchResults={setSearchResults} />} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/detail/:id" component={Detail} />
         <Route exact path="/create" component={Create} />
