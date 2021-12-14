@@ -13,6 +13,7 @@ const Layout = (props) => {
         positions={props.positions}
       />
       {props.children}
+      {window.location.href.includes("position") ? 
       <div className="create-link-container">
         <h3>Can't find what you're looking for?</h3>
         <Link 
@@ -21,7 +22,7 @@ const Layout = (props) => {
         >
           Create
         </Link>
-      </div>
+      </div> : null }
       <footer>
         <a href="https://github.com/ianlov/Wikiroll" ><img src={github} alt="github" /></a>
       </footer>
