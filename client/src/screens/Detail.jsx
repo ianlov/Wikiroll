@@ -37,7 +37,7 @@ const Detail = (props) => {
       <div className="detail-container">
         <img src={position.img_url} alt={position.name}/>
         <div className="detail-container__main-card">
-          <PTSCard name={position.name} />
+          <PTSCard focus={position} />
         </div>
         <div className="detail-container__description">
           <p>{position.description}</p>
@@ -50,7 +50,7 @@ const Detail = (props) => {
                 to={`/detail/${transition.id}`}
                 key={transition.id}
               >
-                <PTSCard name={transition.name} />
+                <PTSCard focus={transition} />
               </Link>
             ))}
           </div> : null}
@@ -61,7 +61,7 @@ const Detail = (props) => {
                 to={`/detail/${submission.id}`}
                 key={submission.id}
               >
-                <PTSCard name={submission.name} />
+                <PTSCard focus={submission} />
               </Link>
             ))}
           </div> : null}

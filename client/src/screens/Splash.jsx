@@ -31,7 +31,7 @@ const Splash = (props) => {
                 to={`/detail/${position.id}`}
                 key={position.id}
               >
-                <PTSCard name={position.name} />
+                <PTSCard focus={position} />
               </Link>
             ))}
           </div>
