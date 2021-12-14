@@ -18,18 +18,18 @@ export const getTransition = async (id, position_id) => {
   }
 }
 
-export const createTransition = async (position_id, submission) => {
+export const createTransition = async (position_id, transition) => {
   try {
-    const res = await api.post(`/positions/${position_id}/transitions`, submission)
+    const res = await api.post(`/positions/${position_id}/transitions`, transition)
     return res.data
   } catch (error) {
     throw error
   }
 }
 
-export const updateTransition = async (id, position_id, submission) => {
+export const updateTransition = async (id, position_id, transition) => {
   try {
-      const res = await api.put(`/positions/${position_id}/transitions/${id}`, submission)
+      const res = await api.put(`/positions/${position_id}/transitions/${id}`, transition)
       return res.data
   } catch (error) {
       throw error

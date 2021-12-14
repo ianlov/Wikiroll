@@ -1,4 +1,7 @@
-.create-form {
+.create-form, .create-form > form {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
+  width: 90vw;
+  max-width: 400px;
 }

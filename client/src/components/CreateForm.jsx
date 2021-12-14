@@ -1,63 +1,155 @@
 import '../assets/css/createform.css'
 
-import { handleType } from "../utilities/handleType.js";
+import { createTransition } from "../services/transitions.js";
+import { createSubmission } from "../services/submissions.js";
 
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const CreateForm = (props) => {
-  const [type, setType] = useState("position")
-  const [created, setCreated] = useState({
-    "name": "",
-    "description": "",
-    "img_url": "",
-    "what_type": type
-  })
+  const history = useHistory();
+  const [type, setType] = useState("")
+  const [item, setItem] = useState({})
 
   const handleChange = (ev) => {
-    const { name, value }  = ev.target
-    setCreated({
-      ...created,
+    const { name, value } = ev.target
+    setItem({
+      ...item,
       [name]: value
     })
   }
-  
+
+  const handleChangeType = (ev) => {
+    setType(ev.target.value)
+    if (ev.target.value === "transition") {
+      setItem({
+        name: item.name,
+        description: item.description,
+        img_url: item.img_url,
+        what_type: "transition",
+        start_id: null,
+        finish_id: null
+      })
+    } else if (ev.target.value === "submission") {
+      setItem({
+        name: item.name,
+        description: item.description,
+        img_url: item.img_url,
+        what_type: "submission",
+        position_id: null
+      })
+    } else {
+      setItem({
+        name: item.name,
+        description: item.description,
+        img_url: item.img_url,
+      })
+    }
+  }
+
+  const handleSubmit = async (ev) => {
+    ev.preventDefault()
+    if (type === 'transition') {
+      const newTransition = {
+        name: item.name,
+        description: item.description,
+        img_url: item.img_url,
+        what_type: item.what_type,
+        start_id: item.start_id,
+        finish_id: item.finish_id
+      }
+      await createTransition(item.start_id, newTransition)
+      history.push(`/position/${item.start_id}`)
+    } else {
+      const newTransition = {
+        name: item.name,
+        description: item.description,
+        img_url: item.img_url,
+        what_type: item.what_type,
+        position_id: item.position_id
+      }
+      await createSubmission(item.position_id, newTransition)
+      history.push(`/position/${item.position_id}`)
+    }
+  }
+
+
   return (
-    <form className="create-form" >
-      <label htmlFor="what_type" >Type</label>
-      <select 
-        onChange={handleChange} 
+    <div className="create-form">
+      <label htmlFor="what_type" >Transition/Submission</label>
+      <select
+        onChange={ev => handleChangeType(ev)}
         name="what_type"
         id="what_type"
       >
-        <option value="position" >Position</option>
+        <option value={null} >Select</option>
         <option value="transition" >Transition</option>
         <option value="submission" >Submission</option>
       </select>
-      {handleType(type, props.positions)}
-      <label htmlFor="name" >Name</label>
-      <input 
-        type="text"
-        name="name" 
-        id="name" 
-        value={created.name}
-        onChange={handleChange}
-      />
-      <label htmlFor="description" >Description</label>
-      <textarea
-        name="description" 
-        id="description" 
-        value={created.description}
-        onChange={handleChange}
-      />
-      <label htmlFor="img_url" >Image Url</label>
-      <input 
-        type="text"
-        name="img_url" 
-        id="img_url" 
-        value={created.img_url}
-        onChange={handleChange}
-      />
-    </form>
+
+      {item.what_type ?
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name" >Name</label>
+          <input
+            name="name"
+            id="name"
+            value={item.name}
+            onChange={handleChange}
+          />
+          <label htmlFor="description" >Description</label>
+          <textarea
+            name="description"
+            id="description"
+            value={item.description}
+            onChange={handleChange}
+          />
+          <label htmlFor="img_url" >Image URL</label>
+          <input
+            name="img_url"
+            id="img_url"
+            value={item.img_url}
+            onChange={handleChange}
+          />
+          {item.what_type === "transition" ?
+            <>
+              <label htmlFor="start_id" >Starting Position</label>
+              <select
+                name="start_id"
+                id="start"
+                onChange={(ev) => handleChange(ev)}
+              >
+                {props.positions.map(position => (
+                  <option key={position.id} value={position.id} >{position.name}</option>
+                ))}
+              </select>
+
+              <label htmlFor="finsih_id" >Finishing Position</label>
+              <select
+                name="finish_id"
+                id="finish_id"
+                onChange={(ev) => handleChange(ev)}
+              >
+                {props.positions.map(position => (
+                  <option key={position.id} value={position.id} >{position.name}</option>
+                ))}
+              </select>
+            </> :
+            <>
+              <label htmlFor="position_id" >Position</label>
+              <select
+                name="position_id"
+                id="position_id"
+                onChange={(ev) => handleChange(ev)}
+              >
+                {props.positions.map(position => (
+                  <option key={position.id} value={position.id} >{position.name}</option>
+                ))}
+              </select>
+            </>
+          }
+          <button>Submit</button>
+        </form> : null}
+    </div>
   )
 }
 
