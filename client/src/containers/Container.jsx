@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { getPositions } from '../services/positions.js';
 
 import Create from "../screens/Create.jsx";
-import Detail from "../screens/Detail.jsx";
+import Position from "../screens/Position.jsx";
 import Edit from "../screens/Edit.jsx";
 import Search from "../screens/Search.jsx";
 import Splash from "../screens/Splash.jsx";
@@ -32,7 +32,7 @@ const Container = () => {
           setSearchResults={setSearchResults}
           positions={positions}
         /> } />
-        <Route path="/position/:id" children={ <Detail 
+        <Route path="/position/:id" children={ <Position 
           setSearchResults={setSearchResults}
           positions={positions}
         /> } />
