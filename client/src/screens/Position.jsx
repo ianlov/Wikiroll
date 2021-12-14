@@ -16,7 +16,6 @@ const Detail = (props) => {
 
   const [transitions, setTransitions] = useState([]);
   const [submissions, setSubmissions] = useState([]);
-  const [show, setShow] = useState(false)
 
   useEffect(() => {
     const transitionFetch = async () => {
@@ -29,7 +28,6 @@ const Detail = (props) => {
       setSubmissions(allSubmissions);
     }
     submissionFetch()
-    setShow(false)
   }, [position.id])
 
   return (
@@ -53,21 +51,13 @@ const Detail = (props) => {
           {transitions.length ? <div className="detail-container__trans-sub-card-container__trans">
             <h2>Transitions from {position.name}</h2>
             {transitions.map(transition => (
-              <DetailCard 
-                focus={transition}
-                show={show} 
-                setShow={setShow}
-              />
+              <DetailCard focus={transition} />
             ))}
           </div> : null}
           {submissions.length ? <div className="detail-container__trans-sub-card-container__sub">
             <h2>Submissions from {position.name}</h2>
             {submissions.map(submission => (
-              <DetailCard 
-                focus={submission} 
-                show={show} 
-                setShow={setShow}
-              />
+              <DetailCard focus={submission} />
             ))}
           </div> : null}
         </div>

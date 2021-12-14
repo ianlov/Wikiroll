@@ -1,16 +1,19 @@
 import '../assets/css/detailcard.css';
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const DetailCard = (props) => {
+  const [show, setShow] = useState(false);
+
   return (
     <div 
-      className={props.show ? "detail-card-open" : "detail-card"} 
+      className={show ? "detail-card-open" : "detail-card"} 
       id={props.focus.what_type}
-      onClick={() => props.setShow(!props.show)}
+      onClick={() => setShow(!show)}
     >
       <h2>{props.focus.name}</h2>
-      {props.show ? 
+      {show ? 
         <div className="detail-card__description-container">
           <img src={props.focus.img_url} alt={props.focus.name} />
           <p>{props.focus.description}</p>
