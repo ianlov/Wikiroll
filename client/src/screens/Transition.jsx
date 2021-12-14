@@ -2,7 +2,7 @@ import '../assets/css/detail.css';
 
 import Layout from "../layouts/Layout.jsx";
 import PTSCard from "../components/PTSCard.jsx";
-import { findWithId } from "../utilities/findWithId.js";
+import { findPositionWithId } from "../utilities/find.js";
 import { getTransitions } from "../services/transitions.js";
 import { getSubmissions } from "../services/submissions.js";
 
@@ -11,7 +11,7 @@ import { useState, useEffect } from "react";
 
 const Detail = (props) => {
   const { id } = useParams();
-  const position = findWithId(Number(id), props.positions)[0];
+  const position = findPositionWithId(Number(id), props.positions)[0];
 
   const [transitions, setTransitions] = useState([]);
   const [submissions, setSubmissions] = useState([]);
