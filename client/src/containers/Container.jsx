@@ -36,7 +36,7 @@ const Container = () => {
           setSearchResults={setSearchResults}
           positions={positions}
         /> } />
-        <Route path="/create" component={Create} />
+        <Route path="/create" children={<Create />} />
         <Route path="/edit" component={Edit} />
       </Switch>
     </>
