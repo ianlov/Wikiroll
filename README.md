@@ -130,12 +130,12 @@ src
 | Date | Deliverable | Complete |
 | ---- | ----------- | -------- |
 | Wed 8 Dec 2021 | Project Idea | Complete |
-| Thu 9 Dec 2021 | Wireframe, Componenet Hierarchy, ERD  | Pending |
-| Fri 10 Dec 2021 | Project Proposal | Pending |
-| Sat 11 Dec 2021 | Back-End Deployed | Incomplete |
+| Thu 9 Dec 2021 | Wireframe, Componenet Hierarchy, ERD  | Complete |
+| Fri 10 Dec 2021 | Project Proposal | Complete |
+| Sat 11 Dec 2021 | Back-End Deployed | Complete |
 | Sun 12 Dec 2021 |  |  |
-| Mon 13 Dec 2021 | Styling | Incomplete |
-| Tue 14 Dec 2021 | Front-End CRUD | Incomplete |
+| Mon 13 Dec 2021 | Styling | Pending |
+| Tue 14 Dec 2021 | Front-End CRUD | Pending |
 | Wed 15 Dec 2021 | Linting, Front-End Deployed | Incomplete |
 | Thu 16 Dec 2021 | Project Presentations | Incomplete |
 
