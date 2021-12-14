@@ -27,8 +27,8 @@ const CreateForm = (props) => {
         description: item.description,
         img_url: item.img_url,
         what_type: "transition",
-        start_id: null,
-        finish_id: null
+        start_id: 1,
+        finish_id: 1
       })
     } else if (ev.target.value === "submission") {
       setItem({
@@ -36,7 +36,7 @@ const CreateForm = (props) => {
         description: item.description,
         img_url: item.img_url,
         what_type: "submission",
-        position_id: null
+        position_id: 1
       })
     } else {
       setItem({
@@ -54,21 +54,21 @@ const CreateForm = (props) => {
         name: item.name,
         description: item.description,
         img_url: item.img_url,
-        what_type: item.what_type,
+        what_type: "transition",
         start_id: item.start_id,
         finish_id: item.finish_id
       }
       await createTransition(item.start_id, newTransition)
       history.push(`/position/${item.start_id}`)
     } else {
-      const newTransition = {
+      const newSubmission = {
         name: item.name,
         description: item.description,
         img_url: item.img_url,
-        what_type: item.what_type,
+        what_type: "submission",
         position_id: item.position_id
       }
-      await createSubmission(item.position_id, newTransition)
+      await createSubmission(item.position_id, newSubmission)
       history.push(`/position/${item.position_id}`)
     }
   }
