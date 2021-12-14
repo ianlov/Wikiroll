@@ -47,7 +47,7 @@ const Detail = (props) => {
             <h2>Transitions from {position.name}</h2>
             {transitions.map(transition => (
               <Link
-                to={`/detail/${transition.id}`}
+                to={`/transition/${transition.id}`}
                 key={transition.id}
               >
                 <PTSCard focus={transition} />
@@ -58,7 +58,7 @@ const Detail = (props) => {
             <h2>Submissions from {position.name}</h2>
             {submissions.map(submission => (
               <Link 
-                to={`/detail/${submission.id}`}
+                to={`/submission/${submission.id}`}
                 key={submission.id}
               >
                 <PTSCard focus={submission} />

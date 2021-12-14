@@ -32,7 +32,7 @@ const Container = () => {
           setSearchResults={setSearchResults}
           positions={positions}
         /> } />
-        <Route path="/detail/:id" children={ <Detail 
+        <Route path="/position/:id" children={ <Detail 
           setSearchResults={setSearchResults}
           positions={positions}
         /> } />

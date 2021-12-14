@@ -16,10 +16,10 @@ const Search = (props) => {
           {props.searchResults.map(result => (
             <Link
               style={{textDecoration: "none"}}
-              to={`/detail/${result.id}`}
+              to={`/position/${result.id}`}
               key={result.id}
             >
-              <PTSCard name={result.name} />
+              <PTSCard focus={result} />
             </Link>
           ))}
         </div>

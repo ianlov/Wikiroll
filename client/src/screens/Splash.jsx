@@ -28,7 +28,7 @@ const Splash = (props) => {
             {props.positions.map(position => (
               <Link
                 style={{textDecoration: "none"}}
-                to={`/detail/${position.id}`}
+                to={`/position/${position.id}`}
                 key={position.id}
               >
                 <PTSCard focus={position} />
