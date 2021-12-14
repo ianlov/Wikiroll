@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { getPositions } from '../services/positions.js';
 
 import Create from "../screens/Create.jsx";
 import Detail from "../screens/Detail.jsx";
@@ -14,7 +14,12 @@ const Container = () => {
   const [transitions, setTransitions] = useState([]);
 
   useEffect(() => {
-    
+    const positionFetch = async () => {
+      const allPositions = await getPositions();
+      setPositions(allPositions);
+      console.log(positions);
+    }
+    positionFetch()
   }, [])
 
   return (
