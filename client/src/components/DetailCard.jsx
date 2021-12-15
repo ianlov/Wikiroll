@@ -25,10 +25,10 @@ const DetailCard = (props) => {
               <p>Next Position</p>
             </Link>
           : null}
-          <Link 
-            to="/edit"
-            className="link-to-edit" 
-          ><p>Edit</p></Link>
+          <p 
+            className="link-to-edit"
+            onClick={() => {props.setIsVisible(true); props.setEditFocus(props.focus)}}
+          >Edit</p>
         </div>
       : null }
     </div>
