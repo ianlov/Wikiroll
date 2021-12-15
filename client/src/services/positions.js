@@ -11,7 +11,7 @@ export const getPositions = async () => {
 
 export const updatePosition = async (id, position) => {
   try {
-      const res = await api.put(`/position/${id}`, position)
+      const res = await api.put(`/positions/${id}`, position)
       return res.data
   } catch (error) {
       throw error

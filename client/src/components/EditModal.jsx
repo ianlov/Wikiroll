@@ -30,7 +30,7 @@ const EditModal = (props) => {
       await updateTransition(edit.id, edit.start_id, edit)
     } else if (edit.what_type==="submission") {
       await updateSubmission(edit.id, edit.position_id, edit)
-    } else {
+    } else if (edit.what_type==="position") {
       await updatePosition(edit.id, edit)
     }
     history.push("/")
