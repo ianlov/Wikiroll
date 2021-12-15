@@ -7,21 +7,27 @@ import EditModal from "../components/EditModal.jsx";
 import { findPositionWithId } from "../utilities/find.js";
 import { getTransitions } from "../services/transitions.js";
 import { getSubmissions } from "../services/submissions.js";
+import { getPosition } from "../services/positions.js";
 
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Detail = (props) => {
   const { id } = useParams();
-  const position = findPositionWithId(Number(id), props.positions)[0];
+  // findPositionWithId(Number(id), props.positions)[0];
 
+  const [position, setPosition] = useState({})
   const [transitions, setTransitions] = useState([]);
   const [submissions, setSubmissions] = useState([]);
   const [editFocus, setEditFocus] = useState({});
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // get one position
+    const positionFetch = async () => {
+      const position = await getPosition(Number(id));
+      setPosition(position)
+    };
+    positionFetch();
   }, [])
 
   useEffect(() => {
