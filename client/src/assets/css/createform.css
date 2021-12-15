@@ -1,7 +1,37 @@
 .create-form, .create-form > form {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  width: 90vw;
-  max-width: 400px;
+}
+
+.create-form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 0px 15px;
+  height: 100vh;
+}
+
+.create-form > select {
+  color: #F4F5F6;
+  background-color: #202021;
+}
+
+.create-form > form > label {
+  padding-top: 5px;
+}
+
+.create-form > form > input, textarea, select {
+  border: none;
+  background-color: #202021;
+  color: #F4F5F6;
+  resize: vertical;
+}
+
+.submit-button {
+  height: 40px;
+  width: 140px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #202021;
+  background-color: #F4F5F6;
+
 }

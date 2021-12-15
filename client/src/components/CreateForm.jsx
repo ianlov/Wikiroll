@@ -147,7 +147,7 @@ const CreateForm = (props) => {
               </select>
             </>
           }
-          <button>Submit</button>
+          <button className="submit-button" >Submit</button>
         </form> : null}
     </div>
   )
