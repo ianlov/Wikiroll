@@ -30,6 +30,7 @@ export const updateTransition = async (id, position_id, transition) => {
 export const destroyTransition = async (id, position_id) => {
   try {
     const res = await api.delete(`/positions/${position_id}/transitions/${id}`)
+    return res.data
   } catch (error) {
     throw error
   }

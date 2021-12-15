@@ -30,6 +30,7 @@ export const updateSubmission = async (id, position_id, submission) => {
 export const destroySubmission = async (id, position_id) => {
   try {
     const res = await api.delete(`/positions/${position_id}/submissions/${id}`)
+    return res.data
   } catch (error) {
     throw error
   }
