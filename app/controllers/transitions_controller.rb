@@ -1,5 +1,5 @@
 class TransitionsController < ApplicationController
-  before_action :set_transition, only: [:show, :update, :destroy]
+  before_action :set_transition, only: [:update, :destroy]
 
   # GET /transitions
   def index
@@ -7,11 +7,6 @@ class TransitionsController < ApplicationController
     @transitions = Transition.where(start_id: @position.id)
 
     render json: @transitions
-  end
-
-  # GET /transitions/1
-  def show
-    render json: @transition
   end
 
   # POST /transitions

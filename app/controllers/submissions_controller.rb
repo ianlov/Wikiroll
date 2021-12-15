@@ -1,16 +1,11 @@
 class SubmissionsController < ApplicationController
-  before_action :set_submission, only: [:show, :update, :destroy]
+  before_action :set_submission, only: [:update, :destroy]
 
   # GET /submissions
   def index
     @position = Position.find(params[:position_id])
     @submissions = Submission.where(position_id: @position.id)
     render json: @submissions, status: :ok
-  end
-
-  # GET /submissions/1
-  def show
-    render json: @submission
   end
 
   # POST /submissions
