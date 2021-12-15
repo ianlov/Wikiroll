@@ -18,9 +18,10 @@
 .detail-container__description {
   background-color: #8A8B8C;
   margin: -50px 5px 0px 5px;
-  max-width: 970px;
+  max-width: 780px;
   padding: 30px 15px 5px 15px;
   z-index: 500;
+  border-radius: 10px;
 }
 
 .detail-container__trans-sub-card-container {
@@ -38,9 +39,11 @@
   width: 100%;
   max-width: 400px;
   margin: 5px 5px 0px 5px;
+  padding-bottom: 30px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  border-radius: 10px;
 }
 
 .detail-container__trans-sub-card-container__sub {
@@ -50,7 +53,15 @@
   width: 100%;
   max-width: 400px;
   margin: 5px 5px 0px 5px;
+  padding-bottom: 30px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  border-radius: 10px;
+}
+
+.link-to-edit {
+  text-align: left;
+  text-decoration: underline;
+  color: #F4F5F6;
 }

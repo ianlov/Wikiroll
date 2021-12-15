@@ -9,15 +9,6 @@ export const getSubmissions = async position_id => {
   }
 }
 
-export const getSubmission = async (id, position_id) => {
-  try {
-    const res = await api.get(`/positions/${position_id}/submissions/${id}`)
-    return res.data
-  } catch (error) {
-    throw error
-  }
-}
-
 export const createSubmission = async (position_id, submission) => {
   try {
     const res = await api.post(`/positions/${position_id}/submissions`, submission)

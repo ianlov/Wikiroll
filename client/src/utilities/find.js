@@ -12,3 +12,8 @@ export const find = (allPositions, search) => {
   })
   return searchResults
 }
+
+export const findPositionWithId = (id, positions) => {
+  const result = positions.filter(position => position.id === id)
+  return result
+}

@@ -75,3 +75,9 @@
   height: 100%;
   width: 80%;
 }
+
+@media screen and (min-width: 900px) {
+  .nav__items__searchbar__focus {
+    width: 400px;
+  }
+}

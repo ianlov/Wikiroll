@@ -1,11 +1,32 @@
 footer {
-  height: 32px;
+  height: 150px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
 }
 
 footer > a > img {
   height: 30px;
   width: auto;
+  padding: 15px;
+}
+
+.create-link-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.create-link-container__button {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #202021;
+  border-radius: 10px;
+  color: #202021;
 }
