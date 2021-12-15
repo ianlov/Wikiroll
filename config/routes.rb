@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :positions, only: [:index, :update] do
+  resources :positions, only: [:index, :show, :update] do
     resources :transitions, only: [:index, :create, :update, :destroy]
     resources :submissions, only: [:index, :create, :update, :destroy]
   end

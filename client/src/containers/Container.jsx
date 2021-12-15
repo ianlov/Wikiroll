@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getPositions } from '../services/positions.js';
 
+import { getPositions } from '../services/positions.js';
 import Create from "../screens/Create.jsx";
 import Position from "../screens/Position.jsx";
 import Search from "../screens/Search.jsx";
