@@ -8,6 +8,7 @@ import { updateSubmission, destroySubmission } from "../services/submissions.js"
 import { updateTransition, destroyTransition } from "../services/transitions.js";
 
 const EditModal = (props) => {
+
   const history = useHistory();
   const [edit, setEdit] = useState({});
 
@@ -23,8 +24,16 @@ const EditModal = (props) => {
     });
   };
 
-  const handleSubmit = (ev) => {
+  const handleSubmit = async (ev) => {
     ev.preventDefault();
+    if (edit.what_type==="transition") {
+      await updateTransition(edit.id, edit.start_id, edit)
+    } else if (edit.what_type==="submission") {
+      await updateSubmission(edit.id, edit.position_id, edit)
+    } else {
+      await updatePosition(edit.id, edit)
+    }
+    history.push("/")
   }
 
   const handleDelete = async () => {

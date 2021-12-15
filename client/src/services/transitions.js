@@ -9,15 +9,6 @@ export const getTransitions = async position_id => {
   }
 }
 
-export const getTransition = async (id, position_id) => {
-  try {
-    const res = await api.get(`/positions/${position_id}/transitions/${id}`)
-    return res.data
-  } catch (error) {
-    throw error
-  }
-}
-
 export const createTransition = async (position_id, transition) => {
   try {
     const res = await api.post(`/positions/${position_id}/transitions`, transition)
