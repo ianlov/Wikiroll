@@ -21,15 +21,19 @@ const Detail = (props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // get one position
+  }, [])
+
+  useEffect(() => {
     const transitionFetch = async () => {
       const allTransitions = await getTransitions(position.id);
       setTransitions(allTransitions);
     }
-    transitionFetch()
     const submissionFetch = async () => {
       const allSubmissions = await getSubmissions(position.id);
       setSubmissions(allSubmissions);
     }
+    transitionFetch()
     submissionFetch()
   }, [position.id])
 
