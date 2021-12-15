@@ -27,8 +27,8 @@ const CreateForm = (props) => {
         description: item.description,
         img_url: item.img_url,
         what_type: "transition",
-        start_id: 1,
-        finish_id: 1
+        start_id: props.positions[0].id,
+        finish_id: props.positions[0].id
       })
     } else if (ev.target.value === "submission") {
       setItem({
@@ -36,7 +36,7 @@ const CreateForm = (props) => {
         description: item.description,
         img_url: item.img_url,
         what_type: "submission",
-        position_id: 1
+        position_id: props.positions[0].id
       })
     } else {
       setItem({
