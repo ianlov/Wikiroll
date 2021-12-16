@@ -18,7 +18,7 @@
 .detail-container__description {
   background-color: #8A8B8C;
   margin: -50px 5px 0px 5px;
-  max-width: 780px;
+  max-width: 700px;
   padding: 30px 15px 5px 15px;
   z-index: 500;
   border-radius: 10px;
@@ -30,6 +30,7 @@
   justify-content: center;
   width: 100vw;
   max-width: 1000px;
+  padding: 0px 15px 5px;
 }
 
 .detail-container__trans-sub-card-container__trans {
@@ -37,7 +38,7 @@
   color: white;
   text-align: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 730px;
   margin: 5px 5px 0px 5px;
   padding-bottom: 30px;
   display: flex;
@@ -51,8 +52,8 @@
   color: white;
   text-align: center;
   width: 100%;
-  max-width: 400px;
-  margin: 5px 5px 0px 5px;
+  max-width: 730px;
+  margin: 5px 5px 0px;
   padding-bottom: 30px;
   display: flex;
   flex-flow: column nowrap;

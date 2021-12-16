@@ -11,10 +11,10 @@
 .screen__modal-wrapper {
   z-index: 2500;
   position: fixed;
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  height: 80%;
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: 15%;
   border-radius: 10px;
   background-color: #F4F5F6;
   border: #202021 solid 3px;
