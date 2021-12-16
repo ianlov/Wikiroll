@@ -18,6 +18,7 @@
   border-radius: 10px;
   background-color: #F4F5F6;
   border: #202021 solid 3px;
+  overflow-y: scroll;
 }
 
 .screen__modal-wrapper > p {
@@ -27,6 +28,11 @@
 
 .delete-button {
   color: #E51010;
+  cursor: pointer;
+}
+
+.close-button {
+  cursor: pointer;
 }
 
 .screen__modal-wrapper__form-container {
@@ -57,4 +63,26 @@
 .screen__modal-wrapper__form-container > form > textarea {
   height: 300px;
   resize: vertical;
+}
+
+.screen__modal-wrapper__form-container > form > button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .screen__modal-wrapper {
+    width: 70%;
+    height: 85%;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .screen__modal-wrapper {
+    width: 50%;
+    height: 85%;
+    margin-top: 5%;
+    margin-left: 25%;
+  }
 }

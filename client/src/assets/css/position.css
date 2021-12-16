@@ -30,7 +30,6 @@
   justify-content: center;
   width: 100vw;
   max-width: 1000px;
-  padding: 0px 15px 5px;
 }
 
 .detail-container__trans-sub-card-container__trans {
@@ -65,4 +64,5 @@
   text-align: left;
   text-decoration: underline;
   color: #F4F5F6;
+  cursor: pointer;
 }

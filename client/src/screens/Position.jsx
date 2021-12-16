@@ -65,6 +65,7 @@ const Detail = (props) => {
           <p>{position?.description}</p>
           <p 
             className="link-to-edit"
+            style={{color: "black"}}
             onClick={() => {setEditFocus(position); setIsVisible(true)}}
           >Edit</p>
         </div>

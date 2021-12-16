@@ -48,7 +48,10 @@ const EditModal = (props) => {
   return props.isVisible ? createPortal(
     <div className="screen" >
       <div className="screen__modal-wrapper" >
-        <p onClick={() => props.setIsVisible(!props.isVisible)} >Close X</p>
+        <p 
+          onClick={() => props.setIsVisible(!props.isVisible)} 
+          className="close-button"
+        >Close X</p>
         <div className="screen__modal-wrapper__form-container" >
           <form onSubmit={handleSubmit} >
             <label htmlFor="name" >Name</label>
