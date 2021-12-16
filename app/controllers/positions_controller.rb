@@ -1,10 +1,14 @@
 class PositionsController < ApplicationController
-  before_action :set_position, only: :update
+  before_action :set_position, only: [:show, :update]
 
   # GET /positions
   def index
     @positions = Position.all
     render json: @positions
+  end
+
+  def show
+    render json: @position
   end
 
   # PATCH/PUT /positions/1
