@@ -21,6 +21,10 @@ const Detail = (props) => {
   const { id } = useParams();
   
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  useEffect(() => {
     const positionFetch = async () => {
       const position = await getPosition(Number(id));
       setPosition(position)

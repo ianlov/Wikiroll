@@ -4,8 +4,13 @@ import Layout from "../layouts/Layout.jsx";
 import PTSCard from "../components/PTSCard.jsx";
 
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Splash = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="splash__splash-image" >
