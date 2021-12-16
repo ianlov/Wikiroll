@@ -19,7 +19,6 @@ const Detail = (props) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const { id } = useParams();
-  console.log(id);
   
   useEffect(() => {
     const positionFetch = async () => {
